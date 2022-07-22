@@ -3,11 +3,12 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>PixelCave</title>
+	<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no" name=viewport>
 	<style>
 		body {
 			font-family: 'Kanit', sans-serif;
+			color: white;
 		}
 
 		#BackDiv {
@@ -36,7 +37,6 @@
 			border: 10px lightskyblue;
 			border-radius: 15vh;
 		}
-
 		.ShopElemLight {
 			position: absolute;
 			left: 10%;
@@ -47,7 +47,7 @@
 		}
 
 		.TextShop {
-			font-size: 250%;
+			font-size: 3vw;
 			left: 50%;
 			font-family: 'Kanit';
 			transform: translate(-50%,-50%);
@@ -55,9 +55,10 @@
 		}
 	</style>
 </head>
-<body style="background-color: rgba(88,203,255,0.49)">
+<body style="background-color: rgba(88,203,255,0.49); width: 12px">
+<img src="cave.jpg" style="left: 0; top: 0; width: 100vw; height: 100vh; position: fixed" id="csave">
 <div id="ShopElements" style="display: none">
-	<img src="X.png" id="Not" style="width: 5vw; height: 10vh; position: absolute; left: 90vw; top: 5vh">
+	<img src="X.png" id="Not" style="width: 5vw; height: auto; position: absolute; left: 90vw; top: 5vh">
 	<div id="coinOne">
 		<div class="ShopElem" style="top: 10%;">
 			<div class="ShopElemLight" style="top: 10%; bottom: 10%">
@@ -65,27 +66,27 @@
 				<img src="Coin.png" class="CoinShop" style="top: 50%; transform: translate(0,-50%)">
 			</div>
 			<img src="Diamond.png" style="position: absolute; width: 10%; height: auto; left: 80%; top: 50%; transform: translate(0,-50%)">
-			<div style="color: white; left: 50%; position: absolute; font-size: 250%; top: 50%; transform: translate(0,-50%)">cost: 50</div>
+			<div style="color: white; left: 50%; position: absolute; font-size: 3vw; top: 50%; transform: translate(0,-50%)">cost: 50</div>
 		</div>
 	</div>
 	<div id="coinTwo">
 		<div class="ShopElem" style="top: 50%;">
 			<div class="ShopElemLight" style="top: 10%; bottom: 10%">
-				<div class="TextShop" style="top: 50%; ">100</div>
+				<div class="TextShop" style="top: 50%; ">200</div>
 				<img src="Coin.png" class="CoinShop" style="top: 50%; transform: translate(0,-50%)">
 			</div>
 			<img src="Diamond.png" style="position: absolute; width: 10%; height: auto; left: 80%; top: 50%; transform: translate(0,-50%)">
-			<div style="color: white; left: 50%; position: absolute; font-size: 250%; top: 50%; transform: translate(0,-50%)">cost: 50</div>
+			<div style="color: white; left: 50%; position: absolute; font-size: 3vw; top: 50%; transform: translate(0,-50%)">cost: 100</div>
 		</div>
 	</div>
 	<div id="coinTre">
 		<div class="ShopElem" style="top: 90%;">
 			<div class="ShopElemLight" style="top: 10%; bottom: 10%">
-				<div class="TextShop" style="top: 50%; ">100</div>
+				<div class="TextShop" style="top: 50%; ">500</div>
 				<img src="Coin.png" class="CoinShop" style="top: 50%; transform: translate(0,-50%)">
 			</div>
 			<img src="Diamond.png" style="position: absolute; width: 10%; height: auto; left: 80%; top: 50%; transform: translate(0,-50%)">
-			<div style="color: white; left: 50%; position: absolute; font-size: 250%; top: 50%; transform: translate(0,-50%)">cost: 50</div>
+			<div style="color: white; left: 50%; position: absolute; font-size: 3vw; top: 50%; transform: translate(0,-50%)">cost: 250</div>
 		</div>
 	</div>
 	<div id="addRemove" style="display: none">
@@ -111,28 +112,25 @@
 	<img src="ShopIcon.png" id="miner" style="width: 15vw; height: auto; position: absolute; bottom: 40%; left: 20%; transform: translate(-50%, 0)">
 	<img src="DiamondOre.png" id="DiamondOre" style=" display:none; width: 15vw; height: auto; position: absolute; bottom: 40%; left: 50%; transform: translate(-50%, 0)">
 	<img src="Cobble.png" id="button" style="width: 15vw; height: auto; background-color: #00d1ff; position: absolute; bottom: 40%; left: 50%; transform: translate(-50%, 0)">
-	<img src="Diamond.png" style="width: 3vw; height: auto; position: absolute; left: 4vw; top: 7%; transform: translate(0,-50%)">
-	<div id="DiamondCounter" style="font-family: 'Kanit', sans-serif; font-size: 250%; position: absolute; top: 7%; transform: translate(0,-50%)">0</div>
-	<div id="coins" style="font-family: 'Kanit', sans-serif; font-size: 250%; position: absolute; text-align: center; width: 100%; top: 7%; transform: translate(0,-50%)">0</div>
-	<img src="Coin.png" style="position: absolute; width: 3%; top: 3%; left: 54%; height: auto">
+	<img src="Diamond.png" style="width: 3vw; height: auto; position: absolute; left: 7%; top: 7%; transform: translate(0,-50%)">
+	<div id="DiamondCounter" style="font-family: 'Kanit', sans-serif; font-size: 4vw; position: absolute; top: 7%; transform: translate(0,-50%)">0</div>
+	<div id="coins" style="font-family: 'Kanit', sans-serif; font-size: 4vw; position: absolute; text-align: center; width: 100%; top: 7%; transform: translate(0,-50%)">0</div>
+	<img src="Coin.png" style="position: absolute; width: 3%; top: 3%; left: 55%; height: auto">
 	<div id="cps"
 		 style="font-family: 'Kanit', sans-serif; font-size: 20px; position: absolute; text-align: center; width: 100vw; top:10vh">
 		click = 1 coin
 	</div>
-	<div id="Bar"
-		 style="font-family: 'Kanit', sans-serif; font-size: 40px; width: 100vw; position: absolute; top: 60vh; display: none; text-align: center">
-		3
-	</div>
+	<div id="Bar" style="font-family: 'Kanit', sans-serif; font-size: 40px; width: 100vw; position: absolute; top: 60vh; display: none; text-align: center">3</div>
 
 	<div id="whatneed" style="position: absolute; left: 50%;width: 10%; height: 25%; bottom: 15%; background-color: #0D3349; transform: translate(-50%,0); display: none">
 		<div id="needcoins" style="font-family: 'Kanit', sans-serif; font-size: 150%; position: absolute; top: 5%; left: 50%; transform: translate(-50%,0); color: white">100/300</div>
 		<div id="needclick" style="font-family: 'Kanit', sans-serif; font-size: 200%; position: absolute; top: 30%; left: 50%; transform: translate(-50%,0); color: white">1/2</div>
-		<img src="LevelUp.png" style="position: absolute; width: 100%; height: auto; left: 0%; bottom: 10%">
+		<img src="LevelUp.png" style="position: absolute; width: 100%; height: auto; bottom: 10%" id="levelUpOne">
 	</div>
 	<div id="whatneedTwo" style="position: absolute; left: 70%;width: 10%; height: 25%; bottom: 15%; background-color: #0D3349; transform: translate(-50%,0); display: none">
-		<div style="font-family: 'Kanit', sans-serif; font-size: 150%; position: absolute; top: 5%; left: 50%; transform: translate(-50%,0); color: white">1000/1000</div>
-		<div style="font-family: 'Kanit', sans-serif; font-size: 200%; position: absolute; top: 30%; left: 50%; transform: translate(-50%,0); color: white">1/5</div>
-		<img src="LevelUp.png" style="position: absolute; width: 100%; height: auto; left: 0%; bottom: 10%">
+		<div id="needCoinTwo" style="font-family: 'Kanit', sans-serif; font-size: 150%; position: absolute; top: 5%; left: 50%; transform: translate(-50%,0); color: white">1000/1000</div>
+		<div id="needClickTwo" style="font-family: 'Kanit', sans-serif; font-size: 200%; position: absolute; top: 30%; left: 50%; transform: translate(-50%,0); color: white">1/5</div>
+		<img src="LevelUp.png" style="position: absolute; width: 100%; height: auto; bottom: 10%" id="levelUpTwo">
 	</div>
 
 	<div id="levels" style="position: absolute; width: 45vw; height: 10vh; left:  50vw; bottom: 5vh; transform: translate(-50%, 0);">
@@ -203,10 +201,13 @@
 	let CanResp = 0
 	let perfect = 0
 	let displayed = 0
+	const needCoinTwo = document.getElementById("needCoinTwo")
+	const needClickTwo = document.getElementById("needClickTwo")
 	const whatNeedTwo = document.getElementById("whatneedTwo")
 	const MessagePack = document.getElementById("messagePack")
 	const MessageText = document.getElementById("MessageText")
 	const DiamondC = document.getElementById("DiamondCounter")
+	const levelUpOne = document.getElementById("levelUpOne")
 	const close = document.getElementById("close")
 	const play = document.getElementById("play")
 	const DinoGood = document.getElementById("DinoGood")
@@ -223,13 +224,14 @@
 	const DiamondOre = document.getElementById("DiamondOre")
 	const shopicon = document.getElementById("shopicon")
 	const button = document.getElementById("button")
-	const coinC = document.getElementById("coins")
+	let coinC = document.getElementById("coins")
 	const ClickUpgrade = document.getElementById("clickUpgrade")
 	const miner = document.getElementById("miner")
 	const minerUpgrade = document.getElementById("minerUpgrade")
 	const PlayerClickUpgrade = document.getElementById("playerClickUpgrade")
 	const upLevel = document.getElementById("levelUp")
 	const GameDino = document.getElementById("gameDino")
+	const levelUpTwo = document.getElementById("levelUpTwo")
 
 	async function delay(ms) {
 		return new Promise(resolve => {
@@ -242,33 +244,67 @@
 		coins=parseInt(localStorage.getItem('coins'))
 		coinC.innerText=coins
 	}
+	if(localStorage.getItem('click')===null){
+		localStorage.setItem('click', playerclick);
+	}else{
+		playerclick=parseInt(localStorage.getItem('click'))
+		cps.innerText="click = "+playerclick+" coin"
+	}
+	if(localStorage.getItem('diamond')===null){
+		localStorage.setItem('diamond', Diamonds);
+	}else{
+		Diamonds=parseInt(localStorage.getItem('diamond'))
+		DiamondC.innerText=Diamonds
+	}
+	if(localStorage.getItem('lvl')===null){
+		localStorage.setItem('lvl', nowLevel);
+	}else{
+		nowLevel=parseInt(localStorage.getItem('lvl'))
+	}
+	if(nowLevel===2){
+		LvlChange.style.left="50%"
+	}
+	if(nowLevel===3){
+		LvlChange.style.left="92%"
+	}
 
 	function LevelUp() {
 		nowLevel += 1
 		if (nowLevel === 2) {
-			coins = coins - 300
+			coins = coins - 500
+			coinC.innerText = coins
+			localStorage.setItem('coins', coins)
 			upLevel.style.display = ""
 			DiamondLvl.innerText = "+50"
 			Diamonds = Diamonds + 50
 			DiamondC.innerText = Diamonds
 			LvlChange.style.left = "50%"
 			whatneed.style.display="none"
+			localStorage.setItem('lvl', nowLevel)
 			setTimeout(function () {
 				upLevel.style.display = "none"
 			}, 5000)
 		} else {
 			if (nowLevel === 3) {
+				coins = coins - 1000
+				coinC.innerText = coins
+				localStorage.setItem('coins', coins)
 				upLevel.style.display = ""
-				DiamondLvl.innerText = "+100"
-				Diamonds = Diamonds + 100
+				DiamondLvl.innerText = "+200"
+				localStorage.setItem('lvl', nowLevel)
+				Diamonds = Diamonds + 200
 				DiamondC.innerText = Diamonds
-				setTimeout(function () {
-					upLevel.style.display = "none"
-				}, 5000)
+				LvlChange.style.left = "92%"
+				whatNeedTwo.style.display="none"
 			}
 		}
 	}
-
+	function CloseShop(){
+		coins = parseInt(localStorage.getItem('coins'))
+		Diamonds = parseInt(localStorage.getItem('diamond'))
+		coinC.innerText=coins
+		DiamondC.innerText=Diamonds
+	}
 	async function MessageDis(Time, text) {
 		MessagePack.style.display = ""
 		MessageText.innerText = text
@@ -309,7 +345,7 @@
 		// if(cp===0){
 		// 	Casino()
 		// }
-		coinTimeOut = setTimeout(buttonOn, 500)
+		// coinTimeOut = setTimeout(buttonOn, 500)
 	}
 
 	function buttonOff() {
@@ -330,6 +366,7 @@
 			DiamondBreakCount = 3
 			Bar.style.display = "none"
 			Diamonds += 5
+			localStorage.setItem('diamond', Diamonds)
 			DiamondC.innerText = Diamonds
 		}
 		if (DiamondBreakCount === 2) {
@@ -350,8 +387,10 @@
 	function ClickButtonUpgrade() {
 		if (coins >= UpgradeCost()) {
 			coins = coins - UpgradeCost()
+			localStorage.setItem('coins', coins)
 			coinC.innerText = coins
 			playerclick += 1
+			localStorage.setItem('click', playerclick)
 			cps.innerText = "click = " + playerclick + " coin"
 			ClickText.innerText = coins + "/" + UpgradeCost()
 		} else {
@@ -438,10 +477,19 @@
 		if (nowLevel === 2) {
 			if (displayed === 0) {
 				whatNeedTwo.style.display = ""
+				needCoinTwo.innerText=coins+"/1000"
+				needClickTwo.innerText=playerclick+"/7"
 				displayed = 1
 			} else {
 				whatNeedTwo.style.display = "none"
 				displayed = 0
+			}
+		}
+	})
+	levelUpTwo.addEventListener("click", function (){
+		if (coins>=1000){
+			if(playerclick>=5){
+				LevelUp()
 			}
 		}
 	})
@@ -456,6 +504,13 @@
 				whatneed.style.display="none"
 				displayed=0
 			}}
+	})
+	levelUpOne.addEventListener("click", function (){
+		if (coins>=500){
+			if(playerclick>=3){
+				LevelUp()
+			}
+		}
 	})
 	// 	if (nowLevel === 1) {
 	// 		if (coins >= 300) {
