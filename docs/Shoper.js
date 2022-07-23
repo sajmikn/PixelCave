@@ -61,3 +61,6 @@ CoinTwo.addEventListener("click", function (){
 CoinTre.addEventListener("click", function (){
 	if(localStorage.getItem('diamond')>=250){CoinsAdd(500)}
 })
+document.addEventListener("scroll", function (){
+	Not.style.top=GetScrollTop() + 5 + "vh"
+})
